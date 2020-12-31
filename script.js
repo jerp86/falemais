@@ -100,3 +100,4 @@ const getDestino = ddd => {
 }
 
 origem.addEventListener('change', () => getDestino(origem.value));
+document.getElementById('date').innerText = `${new Date().getFullYear()} ©`;

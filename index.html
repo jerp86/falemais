@@ -1,50 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FaleMais - VxTel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://vortx.com.br/static/imgs/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <title>FaleMais - VxTel</title>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
 <body>
-    <head>
-        <a href="/index.html">
-            <img src="" alt="">
-        </a>
-    </head>
+  <div class="root">
+    <header>
+      <a href="/">
+        <img src="./assets/logo-expanded-dourado.svg" alt="Logo Vórtx" title="Vórtx | Inovação e transparência em serviços fiduciários" width="350">
+      </a>
+    </header>
 
     <div class="container">
-        <div class="container">
-            <div class="firstContent">
-                <h2>Conheça o FaleMais da VxTel</h2>
-                <p>Compare o custo de suas ligações</p>
-            </div>
-
-            <div class="secondContent">
-                <form>
-                    <label for="origem">Origem:</label>
-                    <select name="origem" id="origem" required>
-                      <option hidden>--Escolha sua Opção--</option>
-                    </select>
-                    <label for="destino">Destino:</label>
-                    <select name="destino" id="destino">
-                      <option hidden>--Escolha sua Opção de Origem--</option>
-                    </select>
-                    <label for="plano">Plano:</label>
-                    <select name="plano" id="plano">
-                      <option hidden>--Escolha sua Opção--</option>
-                    </select>
-                    <label for="tempo">Tempo:</label>
-                    <input type="number" min="1" max="250" name="tempo" id="tempo" placeholder="Informe os minutos...">
-                </form>
-                <button type="submit" id="calcular" onclick="calcular()">Calcular</button>
-            </div>
+      <div class="content">
+        <div class="first">
+          <h2>Conheça o FaleMais da VxTel</h2>
+          <p>Compare o custo de suas ligações</p>
         </div>
-    </div>
-    <div class="results">
-        <h2><span id="faleMais">FaleMais:</span></h2>
-        <h2 id="concorrencia">Concorrências:</h2>
+
+        <div class="second">
+          <form>
+            <label for="origem">Origem:</label>
+            <select name="origem" id="origem" required>
+              <option hidden>--Escolha sua Opção--</option>
+            </select>
+            <label for="destino">Destino:</label>
+            <select name="destino" id="destino">
+              <option hidden>--Escolha sua Opção de Origem--</option>
+            </select>
+            <label for="plano">Plano:</label>
+            <select name="plano" id="plano">
+              <option hidden>--Escolha sua Opção--</option>
+            </select>
+            <label for="tempo">Tempo:</label>
+            <input type="number" min="1" max="250" name="tempo" id="tempo" placeholder="Informe os minutos...">
+          </form>
+          <button type="submit" id="calcular" onclick="calcular()">Calcular</button>
+        </div>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="results">
+      <h2><span id="faleMais">FaleMais:</span></h2>
+      <h2 id="concorrencia">Concorrências:</h2>
+    </div>
+
+    <footer class="app-footer">
+      <span class="app-footer-data" id="date"></span>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/jerp/" target="_blank" class="social">
+          <i data-feather="linkedin">
+            <script>feather.replace()</script>
+          </i>
+        </a>
+        <a href="https://github.com/jerp86/" target="_blank" class="social">
+          <i data-feather="github">
+            <script>feather.replace()</script>
+          </i>
+        </a>
+      </div>
+      <span class="app-footer-message">Desenvolvido por Jerp</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
