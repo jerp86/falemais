@@ -19,8 +19,6 @@ body {
   justify-content: center;
   align-items: center;
 
-  /* background-color: #333; */
-  /* background-color: #444; */
   background-color: #555;
   color: #DDD;
   font-size: 16px;
@@ -38,7 +36,10 @@ button {
 }
 
 .root {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 header {
@@ -48,7 +49,7 @@ header {
 
   width: 100%;
   position: relative;
-  margin: 1.5%;
+  margin: 1%;
   margin-left: 0;
   -webkit-box-pack: center;
 }
@@ -82,7 +83,9 @@ header {
   position: absolute;
   left: 0;
 
-  background-color: #C12C2C;
+  background-color: #b92c2c;
+  /* background-color: #CC2F2A; */
+  /* background-color: #C12C2C; */
 
   width: 50%;
   height: 100%;
@@ -92,7 +95,7 @@ header {
 
 .first {
   z-index: 10;
-  color: #DDD;
+  color: #f4f2ed;
   text-align: center;
   width: 50%;
 }
@@ -128,9 +131,10 @@ header {
   width: 100%;
   height: 2.5rem;
   padding: 1.5%;
-  background-color: #ECF0F9;
+  background-color: #f4f2ed;
   color:#8e734a;
   border: none;
+  transition: 0.3s;
 }
 
 .second form input:hover, .second form select:hover {
@@ -155,6 +159,11 @@ header {
 
   color: #FFF;
   font-weight: bold;
+  transition: 0.2s;
+}
+
+#calcular:hover {
+  opacity: 0.8;
 }
 
 .results {
@@ -163,8 +172,15 @@ header {
   align-items: center;
 
   color: #8e734a;
-  margin: 2.5%;
-  font-size: 150%;
+  margin: 1%;
+  font-size: 1.5rem;
+
+  width: 50vw;
+}
+
+.results #faleMais {
+  color: #f4f2ed;
+  font-weight: bold;
 }
 
 /* app-footer */
