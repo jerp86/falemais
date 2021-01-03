@@ -69,19 +69,23 @@ const listar = (obj, element, txt = '') => {
 
 const calcular = () => {
   if (isNaN(origem.value) || isNaN(destino.value) || isNaN(plano.value)) {
+    faleMais.innerHTML = '';
+    concorrencia.innerText = '';
+
     return alert('Favor preencher todas as opções para que possa ser calculado');
   }
 
   if (isNaN(tempo.value) || Number(tempo.value) === 0 || tempo.value.length === 0) {
+    faleMais.innerHTML = '';
+    concorrencia.innerText = '';
+
     return alert('Os minutos também precisam ser informados para que seja calulado');
   }
 
-  console.log('\n\n');
   const valores = comparativo(origem.value, destino.value);
 
-  // document.getElementById('faleMais').textContent = 'TESTE';
-  faleMais.innerHTML += ` R$ ${valores.faleMais}`;
-  concorrencia.innerText += ` R$ ${valores.concorrencia}`;
+  faleMais.innerHTML = `FaleMais: R$ ${valores.faleMais}`;
+  concorrencia.innerText = `Concorrências: R$ ${valores.concorrencia}`;
 };
 
 const getOrigem = listar(localidades, origem);
